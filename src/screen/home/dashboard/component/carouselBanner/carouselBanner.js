@@ -1,5 +1,5 @@
 /* eslint-disable react-native/no-inline-styles */
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {
   View,
   Image,
@@ -16,8 +16,14 @@ import SkeletonBanner from './skeletonBanner';
 import {dataDummy} from './dummyData';
 
 const CaraouselBanner = () => {
-  const [bannerData, setDataBanner] = useState(dataDummy);
+  const [bannerData, setDataBanner] = useState(null);
   const width = Dimensions.get('window').width * 1;
+
+  useEffect(() => {
+    setTimeout(() => {
+      setDataBanner(dataDummy);
+    }, 3000);
+  }, []);
 
   const CarouselRender = () => {
     return (

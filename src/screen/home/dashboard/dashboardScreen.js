@@ -1,5 +1,9 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {View, Text, StyleSheet, ScrollView, Dimensions} from 'react-native';
+import {useSelector, useDispatch} from 'react-redux';
+import {increment, incrementByAmount} from '../../../redux/reducer/counter';
+import RecomenProduct from './component/recomendProduct/recomentProduct';
+
 import {primaryGray, primaryRed} from '../../../utils/colors';
 import CaraouselBanner from './component/carouselBanner/carouselBanner';
 
@@ -41,6 +45,15 @@ const Dashboard = () => {
     setYCoordinate(positionY);
   };
 
+  const count = useSelector(state => state.counter.value);
+  const dispatch = useDispatch();
+
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     dispatch(incrementByAmount(10));
+  //   }, 3000);
+  // }, []);
+
   return (
     <View style={style.container}>
       <ModalSearch
@@ -57,6 +70,7 @@ const Dashboard = () => {
         <View style={style.scrollViewContainer}>
           <ShortCutMenu />
           <CaraouselBanner />
+          <RecomenProduct />
           {data.map((item, index) => {
             return (
               <View

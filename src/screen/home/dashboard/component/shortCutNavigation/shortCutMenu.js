@@ -97,14 +97,18 @@ const style = StyleSheet.create({
     justifyContent: 'center',
     paddingTop: 15,
     paddingBottom: 10,
+    // marginBottom: 10,
   },
   menuContainerShadow: {
-    shadowColor: '#000',
+    // shadowColor: '#000',
+    shadowColor: 'black',
     shadowOffset: {
       width: 0,
       height: 1,
     },
-    shadowOpacity: 0.2,
+    backgroundColor: 'white', // invisible color
+    zIndex: 10,
+    shadowOpacity: 1,
     shadowRadius: 1.41,
     elevation: 3,
   },

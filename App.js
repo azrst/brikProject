@@ -16,10 +16,6 @@ const App = () => {
     <View style={{flex: 1}}>
       <SafeAreaView style={{backgroundColor: primaryYellow}} />
       <SafeAreaView style={{backgroundColor: 'white', flex: 1}}>
-        {/* <StatusBar
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-        backgroundColor={backgroundStyle.backgroundColor}
-      /> */}
         <Root />
       </SafeAreaView>
     </View>
