@@ -1,12 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {
-  View,
-  Text,
-  StyleSheet,
-  Dimensions,
-  Animated,
-  StatusBar,
-} from 'react-native';
+import {View, StyleSheet, Dimensions, StatusBar} from 'react-native';
 
 import TextInputSearch from '../../../../component/textInputSearchDummy';
 import {primaryYellow} from '../../../../utils/colors';

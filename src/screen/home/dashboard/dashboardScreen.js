@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {View, Text, StyleSheet, ScrollView, Dimensions} from 'react-native';
 import {primaryGray, primaryRed} from '../../../utils/colors';
+import CaraouselBanner from './component/carouselBanner/carouselBanner';
 
 import HeaderDashboard from './component/headerDashboard';
 import ModalSearch from './component/modalSeacrh/modalSearch';
@@ -55,6 +56,7 @@ const Dashboard = () => {
         }}>
         <View style={style.scrollViewContainer}>
           <ShortCutMenu />
+          <CaraouselBanner />
           {data.map((item, index) => {
             return (
               <View
